@@ -16,8 +16,9 @@ app.use("/reviews",reviewController)
 
 const start = async()=>{
     await connect()
-    app.listen(process.env.PORT,()=>{
-        console.log('listening at port')
+    const Port = process.env.PORT || 5000
+    app.listen(Port,()=>{
+        console.log('listening at port 5000')
     })
 }
 module.exports = start
